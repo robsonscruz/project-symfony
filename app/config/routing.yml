@@ -1,0 +1,7 @@
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+
+lucianaSato:
+    pattern:   /qualquercoisa
+    defaults:  { _controller: AppBundle\Controller\ContactController::newAction }
