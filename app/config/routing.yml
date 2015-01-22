@@ -7,12 +7,17 @@ app:
     resource: @AppBundle/Controller/
     type:     annotation
 
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+app_home:
+    path:     /
+    defaults: { _controller: AppBundle:Default:index }
+ 
+app_home_admin:
+    path:     /admin
+    defaults: { _controller: AcmeStoreBundle:Application:index }
+    
 app_client:
     path:     /app/client
     defaults: { _controller: AcmeStoreBundle:Client:index }
-
-
-app_user:
-    path:     /app/{slug}
-    defaults: { _controller: AcmeStoreBundle:User:index }

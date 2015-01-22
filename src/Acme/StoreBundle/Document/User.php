@@ -1,15 +1,16 @@
 <?php
 namespace Acme\StoreBundle\Document;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
  * @MongoDB\Document
  */
-class User
+class User extends BaseUser
 {
 	/**
-	 * @MongoDB\Id
+	 * @MongoDB\Id(strategy="auto")
 	 */
 	protected $id;
 
