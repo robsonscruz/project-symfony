@@ -6,3 +6,13 @@ acme_store:
 app:
     resource: @AppBundle/Controller/
     type:     annotation
+
+
+app_client:
+    path:     /app/client
+    defaults: { _controller: AcmeStoreBundle:Client:index }
+
+
+app_user:
+    path:     /app/{slug}
+    defaults: { _controller: AcmeStoreBundle:User:index }
